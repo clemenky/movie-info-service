@@ -38,7 +38,7 @@ def main():
     socket = context.socket(zmq.REP)
     socket.bind('tcp://*:5555')
 
-    print('Microservice movie-info-service is running...')
+    print('Microservice movie-search-service is running...')
 
     try:
         while True:
@@ -57,7 +57,7 @@ def main():
     finally:
         socket.close()
         context.term()
-        print('Microservice movie-info-service shut down.')
+        print('Microservice movie-search-service shut down.')
 
 
 if __name__ == '__main__':
