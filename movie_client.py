@@ -1,9 +1,7 @@
 import requests
 import os
-from dotenv import load_dotenv
+from config import TMDB_ACCESS_TOKEN
 
-
-load_dotenv()
 
 ACCESS_TOKEN = os.environ.get('TMDB_ACCESS_TOKEN')
 BASE_URL = 'https://api.themoviedb.org/3'

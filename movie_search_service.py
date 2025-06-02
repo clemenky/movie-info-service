@@ -1,6 +1,7 @@
 import zmq
 import json
-from tmdb_client import API_ENDPOINTS
+from movie_client import API_ENDPOINTS
+from config import MOVIE_SEARCH_PORT
 
 
 def process_request(request):
@@ -36,7 +37,7 @@ def process_request(request):
 def main():
     context = zmq.Context()
     socket = context.socket(zmq.REP)
-    socket.bind('tcp://*:5555')
+    socket.bind(f'tcp://*:{MOVIE_SEARCH_PORT}')
 
     print('Microservice movie-search-service is running...')
 
