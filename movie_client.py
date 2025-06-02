@@ -7,7 +7,7 @@ ACCESS_TOKEN = os.environ.get('TMDB_ACCESS_TOKEN')
 BASE_URL = 'https://api.themoviedb.org/3'
 HEADERS = {
     'accept': 'application/json',
-    'Authorization': f'Bearer {ACCESS_TOKEN}'
+    'Authorization': f'Bearer {TMDB_ACCESS_TOKEN}'
 }
 
 def request(endpoint, params=None):
